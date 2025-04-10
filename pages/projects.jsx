@@ -1,5 +1,3 @@
-// pages/projects.jsx
-
 import {
     Box,
     Heading,

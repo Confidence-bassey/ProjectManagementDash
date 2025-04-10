@@ -1,5 +1,3 @@
-// pages/earnings.jsx
-
 import { Box, Heading, Grid, Text, Flex, Stat, StatLabel, StatNumber, Progress } from "@chakra-ui/react";
 
 const mockEarningsData = {
@@ -12,7 +10,7 @@ const mockEarningsData = {
 const EarningsPage = () => {
   return (
     <Box bg="gray.50" p={6} minH="100vh">
-      {/* Page Heading */}
+    
       <Heading size="lg" mb={6}>
         Earnings Summary
       </Heading>
@@ -21,7 +19,6 @@ const EarningsPage = () => {
         Keep track of your financial progress and goals achieved over time!
       </Text>
 
-      {/* Earnings Stats */}
       <Flex wrap="wrap" gap={6} mb={6}>
         {/* Total Earnings */}
         <Box bg="white" borderRadius="lg" shadow="md" p={6} flex="1" minW="300px">

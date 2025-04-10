@@ -1,7 +1,15 @@
 import { Box, Text, Flex, Avatar, HStack, Icon } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 
-const FeedbackCard = ({ feedback }) => {
+const FeedbackCard = ({ feedback = {} }) => {
+
+  const {
+    client = "Anonymous Client",
+    avatar = "",
+    rating = 0,
+    comment = "No feedback provided",
+  } = feedback;
+
   return (
     <Box
       bg="white"
@@ -12,15 +20,14 @@ const FeedbackCard = ({ feedback }) => {
       maxW="sm"
       mb={4}
     >
-
       <Flex align="center" mb={4}>
         <Avatar
-          name={feedback.client}
-          src={feedback.avatar || ""}
+          name={client} 
+          src={avatar} 
           mr={4}
         />
         <Box>
-          <Text fontWeight="bold">{feedback.client}</Text>
+          <Text fontWeight="bold">{client}</Text>
           <HStack>
             {Array(5)
               .fill("")
@@ -28,19 +35,19 @@ const FeedbackCard = ({ feedback }) => {
                 <Icon
                   as={StarIcon}
                   key={i}
-                  color={i < feedback.rating ? "yellow.400" : "gray.300"}
+                  color={i < rating ? "yellow.400" : "gray.300"} 
                 />
               ))}
           </HStack>
         </Box>
       </Flex>
 
-
       <Text color="gray.600" fontStyle="italic">
-        "{feedback.comment}"
+        "{comment}" 
       </Text>
     </Box>
   );
 };
 
 export default FeedbackCard;
+

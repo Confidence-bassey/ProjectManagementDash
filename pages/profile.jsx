@@ -1,5 +1,3 @@
-// pages/profile.jsx
-
 import {
     Box,
     Heading,
@@ -27,7 +25,7 @@ import {
           <Avatar
             size="2xl"
             name="John Doe"
-            src="/profile-pic.png" // Replace with actual profile image path
+            src="/profile-pic.png" 
             mb={4}
           />
           <Heading size="lg">John Doe</Heading>

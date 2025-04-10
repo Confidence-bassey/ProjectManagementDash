@@ -17,7 +17,6 @@ import EarningsChart from "../components/EarningsChart";
 const DashboardHome = () => {
   return (
     <Flex direction="row" h="100vh" bg="gray.50">
-      {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
